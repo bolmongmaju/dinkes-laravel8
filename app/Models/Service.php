@@ -22,8 +22,14 @@ class Service extends Model
      * @param  mixed $image
      * @return void
      */
-    // public function getImageAttribute($icon)
-    // {
-    //     return asset('storage/service-images/' . $icon);
-    // }
+
+    public function getImageAttribute($value)
+    {
+        return asset('storage/assets/layanan/' . $value);
+    }
+
+    public function getNameAttribute($value)
+    {
+        return strtolower($value);
+    }
 }
